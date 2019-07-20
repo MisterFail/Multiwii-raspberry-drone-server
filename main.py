@@ -37,7 +37,7 @@ class Main():
 if __name__ == "__main__":
 	global board
 	board = multiwii.drone('/dev/ttyUSB0')
-	camera = picamera.PiCamera()
+	camera = picamera.PiCamera(resolution="1920x1080", framerate=30)
 	camera.vflip = True
 	camera.hflip = True
 	
